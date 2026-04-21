@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { fetchTodos, useIsLoading, useTodos } from "../store/use-todos-store";
 import { completeTodo, deleteTodo } from "../store/use-todos-store";
+import { Button } from "./ui/button";
 
 
 const TodoList: FC = () => {
@@ -9,10 +10,11 @@ const TodoList: FC = () => {
 
   return (
     <>
-    <button onClick={fetchTodos}>Загрузить Список</button>
+    
 
-      <div className='todos'>
-        <h1>Todo List</h1>
+      <div className='todos flex flex-col gap-4 justify-center items-center border border-gray-300 p-4 rounded-lg'>
+        <h1 className="text-3xl font-bold text-gray-100">Тудушник на zusland</h1>
+        <Button onClick={fetchTodos} variant="link">Загрузить Список</Button>
         {
           !isLoading ? (
             <ul className="todo-list">

@@ -1,6 +1,8 @@
 import meLogo from "../assets/skul.svg";
 import zustandLogo from "../assets/zustand.svg";
 import tailwindLogo from "../assets/tailwind-svgrepo-com.svg";
+import shadcnLogo from "../assets/Shadcn.svg";
+import zodLogo from "../assets/Zod.svg";
 
 const Icons = () => {
   return (
@@ -13,6 +15,12 @@ const Icons = () => {
       </a>
       <a href="https://tailwindcss.com/" target="_blank">
         <img src={tailwindLogo} className="my_logo_class" alt="Tailwind logo" />
+      </a>
+      <a href="https://ui.shadcn.com/" target="_blank">
+        <img src={shadcnLogo} className="my_logo_class" alt="Shadcn logo" />
+      </a>
+      <a href="https://zod.dev/" target="_blank">
+        <img src={zodLogo} className="my_logo_class" alt="Zod logo" />
       </a>
     </div>
   );
