@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm cursor-pointer font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm cursor-pointer font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:opacity-80",
   {
     variants: {
       variant: {
@@ -13,11 +13,11 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:border-2 hover:text-accent-foreground ",
+          "border border-input bg-background hover:outline-2 hover:text-accent-foreground transition-colors transition-outline-200",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:shadow-2xl hover:shadow-gray-300 bg-gray-100 text-gray-800",
+          "flex-1 bg-gray-900 text-white py-2 px-4 rounded-md hover:bg-black hover:outline-2 hover:text-accent-foreground transition-colors",
+        ghost: "flex-1 bg-transperent-0.5 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors",
+        link: "text-primary underline-offset-4 hover:shadow-2xl hover:shadow-gray-300 bg-gray-100 text-gray-800 hover:text-black",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -1,8 +1,11 @@
 import React from 'react';
-import { useFormData, updateFormField, resetForm, submitForm } from '../store/use-form-store';
+import { useFormErrors, useFormData, updateFormField, resetForm, submitForm } from '../store/use-form-store';
+import { Button } from "./ui/button";
+import FormField from "./ui/input";
 
 const Form: React.FC = () => {
   const formData = useFormData();
+  const errors = useFormErrors();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -15,53 +18,73 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-6 bg-white rounded-lg shadow-md">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-          Name
-        </label>
-        <input
-          type="text"
+    <div className='my-10 w-[600px] flex flex-col gap-4 justify-center items-center border border-gray-300 p-4 rounded-lg'>
+      <h1 className="text-3xl font-bold text-gray-100">Form</h1>
+
+
+      <form onSubmit={handleSubmit} className="bg-gray-800 w-[400px] space-y-4 p-6 rounded-lg shadow-md text-gray-100">
+        <FormField
           id="name"
           name="name"
+          label="Name"
+          type="text"
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
+          placeholder="Введите ваше имя"
         />
-      </div>
-
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-          Email
-        </label>
-        <input
-          type="email"
+        {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+        <FormField
           id="email"
           name="email"
+          label="Email"
+          type="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
+          placeholder="example@mail.com"
         />
-      </div>
+        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+        <FormField
+          id="password"
+          name="password"
+          label="Password"
+          type="password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+          placeholder="Введите пароль"
+        />
+        {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
+        <FormField
+          id="phone"
+          name="phone"
+          label="Phone"
+          type="tel"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          placeholder="+7 (999) 123-45-67"
+        />
+        {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
 
-      <div className="flex gap-2">
-        <button
-          type="submit"
-          className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-        >
-          Submit
-        </button>
-        <button
-          type="button"
-          onClick={resetForm}
-          className="flex-1 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
-        >
-          Reset
-        </button>
-      </div>
-    </form>
+        <div className="flex gap-2">
+          <Button
+            variant="secondary"
+            type="submit"
+          >
+            Отправить
+          </Button>
+          <Button
+            variant='ghost'
+            type="button"
+            onClick={resetForm}
+          >
+            Очистить
+          </Button>
+        </div>
+      </form>
+    </div>
   );
 };
 

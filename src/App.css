@@ -73,7 +73,7 @@
 }
 
 .my_logo_class:hover {
-  filter: drop-shadow(0 0 2em #fd1818bf);
+  filter: drop-shadow(0 0 1.5em #c20303c8);
 }
 
 
