@@ -19,7 +19,7 @@ const Form: React.FC = () => {
 
   return (
     <div className='my-10 w-[600px] flex flex-col gap-4 justify-center items-center border border-gray-300 p-4 rounded-lg'>
-      <h1 className="text-3xl font-bold text-gray-100">Form</h1>
+      <h1 className="text-3xl font-bold text-gray-100">Форма с валидацией через Zod</h1>
 
 
       <form onSubmit={handleSubmit} className="bg-gray-800 w-[400px] space-y-4 p-6 rounded-lg shadow-md text-gray-100">
