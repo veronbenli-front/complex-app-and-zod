@@ -1,11 +1,11 @@
 {
     "counter": {
-        "title": "Счетчик на Zusland",
+        "title": "Счетчик на Zustand",
         "increment": "Увеличить число",
         "decrement": "Уменьшить число"
     },
     "todo": {
-        "title": "Тудушник на zusland",
+        "title": "Тудушник на Zustand",
         "loading": "Загружаем тудушки как кирпичи...",
         "load": "Загрузить Список"
     },
