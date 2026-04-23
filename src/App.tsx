@@ -6,6 +6,7 @@ import Form from "./components/form";
 
 function App() {
 
+
   return (
     <div className="min-h-screen w-screen bg-gray-700 flex flex-col items-center justify-start">
       <Icons />

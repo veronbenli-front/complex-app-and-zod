@@ -1,0 +1,25 @@
+{
+    "counter": {
+        "title": "Счетчик на Zusland",
+        "increment": "Увеличить число",
+        "decrement": "Уменьшить число"
+    },
+    "todo": {
+        "title": "Тудушник на zusland",
+        "loading": "Загружаем тудушки как кирпичи...",
+        "load": "Загрузить Список"
+    },
+    "form": {
+        "title": "Форма с валидацией через Zod",
+        "name": "Имя",
+        "namePlaceholder": "Введите ваше имя",
+        "email": "Почта",
+        "emailPlaceholder": "Введите вашу почту",
+        "password": "Пароль",
+        "passwordPlaceholder": "Введите ваш пароль",
+        "phone": "Телефон",
+        "phonePlaceholder": "Введите ваш телефон",
+        "buttonSubmit": "Отправить",
+        "buttonReset": "Сбросить"
+    }
+}

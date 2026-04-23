@@ -1,8 +1,8 @@
-import meLogo from "../assets/skul.svg";
-import zustandLogo from "../assets/zustand.svg";
-import tailwindLogo from "../assets/tailwind-svgrepo-com.svg";
-import shadcnLogo from "../assets/Shadcn.svg";
-import zodLogo from "../assets/Zod.svg";
+import meLogo from "../icon/skul.svg";
+import zustandLogo from "../icon/zustand.svg";
+import tailwindLogo from "../icon/tailwind-svgrepo-com.svg";
+import shadcnLogo from "../icon/Shadcn.svg";
+import zodLogo from "../icon/Zod.svg";
 
 const Icons = () => {
   return (

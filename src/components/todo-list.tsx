@@ -2,9 +2,10 @@ import type { FC } from "react";
 import { fetchTodos, useIsLoading, useTodos } from "../store/use-todos-store";
 import { completeTodo, deleteTodo } from "../store/use-todos-store";
 import { Button } from "./ui/button";
-
+import { useTranslation } from "react-i18next";
 
 const TodoList: FC = () => {
+  const { t, i18n } = useTranslation();
   const todos = useTodos();
   const isLoading = useIsLoading();
 
@@ -13,8 +14,8 @@ const TodoList: FC = () => {
     
 
       <div className='todos flex flex-col gap-4 justify-center items-center border border-gray-300 p-4 rounded-lg'>
-        <h1 className="text-3xl font-bold text-gray-100">Тудушник на zusland</h1>
-        <Button onClick={fetchTodos} variant="link">Загрузить Список</Button>
+        <h1 className="text-3xl font-bold text-gray-100">{t("todo.title")}</h1>
+        <Button onClick={fetchTodos} variant="link">{t("todo.load")}</Button>
         {
           !isLoading ? (
             <ul className="todo-list">
@@ -31,7 +32,7 @@ const TodoList: FC = () => {
               ))}
             </ul>
           ) : (
-            <p>Грузим тудушки аки кирпичи...</p>
+            <p>{t("todo.loading")}</p>
           )
         }
       </div>

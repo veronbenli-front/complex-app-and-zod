@@ -2,8 +2,10 @@ import React from 'react';
 import { useFormErrors, useFormData, updateFormField, resetForm, submitForm } from '../store/use-form-store';
 import { Button } from "./ui/button";
 import FormField from "./ui/input";
+import { useTranslation } from "react-i18next";
 
 const Form: React.FC = () => {
+  const [t, i18n] = useTranslation();
   const formData = useFormData();
   const errors = useFormErrors();
 
@@ -19,52 +21,52 @@ const Form: React.FC = () => {
 
   return (
     <div className='my-10 w-[600px] flex flex-col gap-4 justify-center items-center border border-gray-300 p-4 rounded-lg'>
-      <h1 className="text-3xl font-bold text-gray-100">Форма с валидацией через Zod</h1>
+      <h1 className="text-3xl font-bold text-gray-100">{t("form.title")}</h1>
 
 
       <form onSubmit={handleSubmit} className="bg-gray-800 w-[400px] space-y-4 p-6 rounded-lg shadow-md text-gray-100">
         <FormField
           id="name"
           name="name"
-          label="Name"
+          label={t("form.name")}
           type="text"
           value={formData.name}
           onChange={handleChange}
           required
-          placeholder="Введите ваше имя"
+          placeholder={t("form.namePlaceholder")}
         />
         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         <FormField
           id="email"
           name="email"
-          label="Email"
+          label={t("form.email")}
           type="email"
           value={formData.email}
           onChange={handleChange}
           required
-          placeholder="example@mail.com"
+          placeholder={t("form.emailPlaceholder")}
         />
         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         <FormField
           id="password"
           name="password"
-          label="Password"
+          label={t("form.password")}
           type="password"
           value={formData.password}
           onChange={handleChange}
           required
-          placeholder="Введите пароль"
+          placeholder={t("form.passwordPlaceholder")}
         />
         {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
         <FormField
           id="phone"
           name="phone"
-          label="Phone"
+          label={t("form.phone")}
           type="tel"
           value={formData.phone}
           onChange={handleChange}
           required
-          placeholder="+7 (999) 123-45-67"
+          placeholder={t("form.phonePlaceholder")}
         />
         {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
 
@@ -73,14 +75,14 @@ const Form: React.FC = () => {
             variant="secondary"
             type="submit"
           >
-            Отправить
+            {t("form.buttonSubmit")}
           </Button>
           <Button
             variant='ghost'
             type="button"
             onClick={resetForm}
           >
-            Очистить
+            {t("form.buttonReset")}
           </Button>
         </div>
       </form>

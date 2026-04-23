@@ -1,0 +1,25 @@
+{
+    "counter": {
+        "title": "Counter for the Zustand",
+        "increment": "Increment",
+        "decrement": "Decrement"
+    },
+    "todo": {
+        "title": "Todo List for the Zustand",
+        "loading": "Loading todos like bricks...",
+        "load": "Load Todos"
+    },
+    "form": {
+        "title": "Form with Zod validation",
+        "name": "Name",
+        "namePlaceholder": "Enter your name",
+        "email": "Email",
+        "emailPlaceholder": "Enter your email",
+        "password": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "phone": "Phone",
+        "phonePlaceholder": "Enter your phone",
+        "buttonSubmit": "Submit",
+        "buttonReset": "Reset"
+    }
+}
