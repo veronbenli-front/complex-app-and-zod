@@ -1,0 +1,15 @@
+import { createFileRoute } from '@tanstack/react-router'
+import Icons from '@/components/icons'
+import "../App.css";
+
+export const Route = createFileRoute('/allProgres')({
+    component: Index,
+})
+
+function Index() {
+    return (
+        <div className="min-h-screen w-screen bg-gray-700">
+            <Icons />
+        </div>
+    )
+}

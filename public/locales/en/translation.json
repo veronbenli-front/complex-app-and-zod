@@ -1,4 +1,11 @@
 {
+    "index": {
+        "mainText": "In this application, various technologies and libraries are tested that are necessary for developing a real project on React. Some of them may be applied not quite correctly or not quite appropriate in this context. But who cares when the whole world is flying into ruins..."
+    },
+    "navigation": {
+        "home": "Home",
+        "allProgres": "All Progres"
+    },
     "counter": {
         "title": "Counter for the Zustand",
         "increment": "Increment",

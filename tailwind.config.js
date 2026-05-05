@@ -13,6 +13,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {},
+      fontFamily: {
+        'cheltenham': 'var(--font-cheltenham)',
+        'cheltenham-bold': 'var(--font-cheltenham-bold)',
+      },
     },
   },
   plugins: [],
